@@ -105,3 +105,20 @@ newObj= {
     age:32
 }
 console.log(newObj);
+
+
+// type any
+
+let age2:any = 23
+ 
+age2 = 'somenew Age'
+console.log(age2);
+
+
+let abel : {name:any, age:any}
+
+abel = {name:'the weeknd',age:30}
+console.log(abel);
+
+abel ={name:20,age:'the weeknd'}
+console.log(abel);
