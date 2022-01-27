@@ -1,11 +1,19 @@
 "use strict";
-// functions
-const greetings = () => {
-    console.log('Dawn Fm');
+//  Funtions Signatures 
+// example 
+let greet;
+greet = (name, greetings) => {
+    console.log(`${name} says this ${greetings}`);
 };
-greetings();
-const add = (a, b, c) => {
-    console.log(a + b);
-    console.log(c);
+// example 2
+let cal;
+cal = (numOne, numTwo, action) => {
+    if (action === 'add') {
+        return numOne + numTwo;
+    }
+    else {
+        return numOne - numTwo;
+    }
 };
-add(23, 11, 'some');
+const result = cal(44, 20, 'adasd');
+console.log(result);

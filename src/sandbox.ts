@@ -1,14 +1,30 @@
-// functions
+//  Funtions Signatures 
 
-const greetings = ()  => {
-    console.log('Dawn Fm'); 
+// example 
+let greet : (a:string,b:string)=> void
+
+greet = (name,greetings) => {
+    console.log(`${name} says this ${greetings}`);
 }
 
-greetings()
 
-const add =(a:number,b:number,c?:number| string) => {
-    console.log(a +b);
-    console.log( c);
-} 
+// example 2
 
-add(23,11,'some')
+let cal : (a:number,b:number,c:string) => number
+
+cal = (numOne:number,numTwo:number,action:string)=> {
+    if(action === 'add'){
+
+     return    numOne+ numTwo
+    }
+    else {
+        return numOne - numTwo
+    }
+}
+
+const result = cal(44,20,'adasd')
+
+console.log(result);
+
+
+
