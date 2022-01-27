@@ -1,19 +1,17 @@
 "use strict";
-//  Funtions Signatures 
-// example 
-let greet;
-greet = (name, greetings) => {
-    console.log(`${name} says this ${greetings}`);
-};
-// example 2
-let cal;
-cal = (numOne, numTwo, action) => {
-    if (action === 'add') {
-        return numOne + numTwo;
-    }
-    else {
-        return numOne - numTwo;
-    }
-};
-const result = cal(44, 20, 'adasd');
-console.log(result);
+const ancor = document.querySelector('a');
+// console.log(ancor);
+// if(ancor)
+//     console.log(ancor);
+const form = document.querySelector('form');
+// console.log(form?.children);
+//inputs
+const type = document.querySelector('#type');
+// console.log(type);
+const tofrom = document.querySelector('#tofrom');
+const details = document.querySelector('#details');
+const amount = document.querySelector('#amount');
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    console.log(type.value, tofrom.value, details.value, amount.valueAsNumber);
+});

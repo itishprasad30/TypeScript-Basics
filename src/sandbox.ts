@@ -1,30 +1,24 @@
-//  Funtions Signatures 
-
-// example 
-let greet : (a:string,b:string)=> void
-
-greet = (name,greetings) => {
-    console.log(`${name} says this ${greetings}`);
-}
+const ancor = document.querySelector('a')!
+// console.log(ancor);
 
 
-// example 2
+// if(ancor)
+//     console.log(ancor);
 
-let cal : (a:number,b:number,c:string) => number
+const form = document.querySelector('form') as HTMLFormElement
+// console.log(form?.children);
 
-cal = (numOne:number,numTwo:number,action:string)=> {
-    if(action === 'add'){
+//inputs
 
-     return    numOne+ numTwo
-    }
-    else {
-        return numOne - numTwo
-    }
-}
+const type = document.querySelector('#type') as HTMLSelectElement
+// console.log(type);
 
-const result = cal(44,20,'adasd')
-
-console.log(result);
+const tofrom = document.querySelector('#tofrom') as HTMLInputElement
+const details = document.querySelector('#details') as HTMLInputElement
+const amount = document.querySelector('#amount') as HTMLInputElement
 
 
-
+form.addEventListener('submit',(e:Event) => {
+    e.preventDefault()
+    console.log(type.value,tofrom.value,details.value,amount.valueAsNumber);
+})
