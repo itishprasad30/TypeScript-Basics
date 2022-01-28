@@ -9,6 +9,6 @@ export class Invoice {
         this.amount = amount;
     }
     formart() {
-        return `${this.client} owns $${this.amount} for ${this.details}`;
+        return `${this.client} owns $ ${this.amount} for ${this.details}`;
     }
 }

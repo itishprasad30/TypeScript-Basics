@@ -8,6 +8,6 @@ export  class Invoice {
     }
 
     formart(){
-        return `${this.client} owns $${this.amount} for ${this.details}`
+        return `${this.client} owns $ ${this.amount} for ${this.details}`
     }
 } 
