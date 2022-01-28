@@ -1,24 +1,28 @@
-const ancor = document.querySelector('a')!
-// console.log(ancor);
+class Invoice {
+   // there are three access modifires in the 
+   //1 public
+   // 2. private
+   // 3. readonly
 
+    constructor(readonly client:string,public details:string,private amount:number,){
+    }
 
-// if(ancor)
-//     console.log(ancor);
+    formart(){
+        return `${this.client} owns $${this.amount} for ${this.details}`
+    }
+} 
 
-const form = document.querySelector('form') as HTMLFormElement
-// console.log(form?.children);
+const invoOne = new Invoice('Pintu','for website',2333)
 
-//inputs
+const invoTwo = new Invoice('Dua Lipa','80s sound creation',23)
 
-const type = document.querySelector('#type') as HTMLSelectElement
-// console.log(type);
+let invoice : Invoice[] = []
+invoice.push(invoOne)
+invoice.push(invoTwo)
 
-const tofrom = document.querySelector('#tofrom') as HTMLInputElement
-const details = document.querySelector('#details') as HTMLInputElement
-const amount = document.querySelector('#amount') as HTMLInputElement
+console.log(invoOne.formart());
 
-
-form.addEventListener('submit',(e:Event) => {
-    e.preventDefault()
-    console.log(type.value,tofrom.value,details.value,amount.valueAsNumber);
-})
+invoice.forEach(element => {
+    console.log(invoTwo.formart());
+    console.log(element);
+});
