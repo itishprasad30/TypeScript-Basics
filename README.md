@@ -8,3 +8,5 @@
 - its add type def to javascirpt .
 
 - but one major problem all browser don't supports typescript,so it will first convert to javascript the exhicute it.
+
+- Its based on Java Language
